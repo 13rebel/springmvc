@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="
+	http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+	<!--  there are three ways to declare setter bean -->
+	<!-- 1st way -->
+	<bean class="com.springcore.Student" name="student1">
+		<property name="studentId">
+			<value>100</value>
+		</property>
+		<property name="studentName">
+			<value>Ankit Pathak</value>
+		</property>
+
+	</bean>
+	<!-- Second way -->
+	<bean class="com.springcore.Student" name="student2">
+		<!-- we can also use inline value -->
+		<property name="studentId" value="123"/>
+		<property name="studentName" value="sohan"/>
+	</bean>
+	<!-- 3rd way -->
+	<!-- we can also use p-schema to provide metadeta to bean -->
+	<bean class="com.springcore.Student" name="student3" p:studentId="409" p:studentName="Ramu"/>
+</beans>
